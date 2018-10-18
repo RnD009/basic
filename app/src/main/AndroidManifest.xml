@@ -18,10 +18,6 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -41,14 +37,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".list" />
-        <activity android:name=".about" />
-        <activity android:name=".cas" />
-        <activity android:name=".changepassword" />
-        <activity android:name=".header" />
-        <activity android:name=".intruksi" />
-        <activity android:name=".login" />
-        <activity android:name=".setup"></activity>
+        <activity
+            android:name=".intruksi"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".changepassword"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".cas"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".setup"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".about"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".list"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".login"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".header"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
