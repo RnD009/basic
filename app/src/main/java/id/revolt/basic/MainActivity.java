@@ -471,6 +471,7 @@ public class MainActivity extends AppCompatActivity
         this.a5 = (ImageButton) findViewById(R.id.all_up);
         this.a6 = (ImageButton) findViewById(R.id.all_down);
         this.e = (TextView) findViewById(R.id.e);
+
         this.L1 = (TextView) findViewById(R.id.tv1);
         this.R1 = (TextView) findViewById(R.id.tv2);
 
@@ -800,14 +801,16 @@ public class MainActivity extends AppCompatActivity
                                             String[] separate = data.split(":");
                                             separate[0] = separate[0].trim();
                                             separate[1] = separate[1].trim();
+                                            separate[2] = separate[2].trim();
 
                                             System.out.println(separate[0]);
                                             System.out.println(separate[1]);
+                                            System.out.println(separate[2]);
 
                                             MainActivity.this.L1.setText(separate[0]);
                                             MainActivity.this.R1.setText(separate[1]);
 
-                                            MainActivity.this.tvSW.setText(separate[4] + " psi");
+                                            MainActivity.this.tvSW.setText(separate[2] + " psi");
 
                                         }
                                     });
