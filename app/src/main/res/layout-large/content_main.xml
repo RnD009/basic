@@ -11,7 +11,7 @@
     tools:context=".MainActivity">
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="390dp"
         android:layout_height="60dp">
 
         <ImageView
@@ -32,10 +32,11 @@
 
     <!--nilai tekanan-->
     <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="170dp"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/bg_indikator2">
 
         <TextView
@@ -100,8 +101,8 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="200dp"
-        android:layout_height="220dp"
+        android:layout_width="210dp"
+        android:layout_height="230dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/bg_btn">
@@ -230,21 +231,21 @@
             app:layout_constraintVertical_bias="1.0" />
     </android.support.constraint.ConstraintLayout>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="390dp"
         android:gravity="center"
         android:layout_height="20dp">
 
         <TextView
             android:id="@+id/e"
-            android:layout_width="match_parent"
+            android:layout_width="390dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu"
             android:layout_height="20dp"
             android:textAlignment="center" />
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="260dp"
+        android:layout_height="52dp"
         android:layout_marginHorizontal="50dp"
         android:background="@drawable/bg_memory">
 
