@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-import id.revolt.basic.R;
 
 
 public class cas extends AppCompatActivity {

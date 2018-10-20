@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+
 public class login extends AppCompatActivity {
 
-    private Button cancel;
-    private Button oke;
-    private TextView pswd;
+    @BindView(R.id.btn_cancel) Button cancel;
+    @BindView(R.id.btn_ok) Button oke;
+    @BindView(R.id.txt_password) TextView pswd;
 
     private View.OnClickListener cancel1 = new View.OnClickListener() {
         @Override

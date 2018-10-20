@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.revolt.basic">
 
-    <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="28" />
+    <!--<uses-sdk android:targetSdkVersion="28" />-->
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />

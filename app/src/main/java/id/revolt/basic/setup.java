@@ -10,11 +10,13 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.ToggleButton;
 
+import butterknife.BindView;
+
 public class setup extends AppCompatActivity {
-    private Switch sw1;
-    private Switch sw2;
-    private Switch sw3;
-    private Button save;
+    @BindView(R.id.sw1) Switch sw1;
+    @BindView(R.id.sw2) Switch sw2;
+    @BindView(R.id.sw3) Switch sw3;
+    @BindView(R.id.btn_save) Button save;
     boolean switch1;
 
     private View.OnClickListener save1 = new View.OnClickListener() {
