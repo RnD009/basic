@@ -35,32 +35,42 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-
-
-
-
     public Vibrator h;
 
-    //button up-down
-    @BindView(R.id.front_up) ImageButton a1;
-    @BindView(R.id.front_down) ImageButton a2;
-    @BindView(R.id.rear_up) ImageButton a3;
-    @BindView(R.id.rear_down) ImageButton a4;
-    @BindView(R.id.all_up) ImageButton a5;
-    @BindView(R.id.all_down) ImageButton a6;
+    @BindView(R.id.front_up)
+    ImageButton a1;
+    @BindView(R.id.front_down)
+    ImageButton a2;
+    @BindView(R.id.rear_up)
+    ImageButton a3;
+    @BindView(R.id.rear_down)
+    ImageButton a4;
+    @BindView(R.id.all_up)
+    ImageButton a5;
+    @BindView(R.id.all_down)
+    ImageButton a6;
 
-    @BindView(R.id.tg_bt) ToggleButton btn_bt;
-    @BindView(R.id.btn_alldown) ImageButton alldown;
-    @BindView(R.id.btn_mem1) ImageButton mem1;
-    @BindView(R.id.btn_mem2) ImageButton mem2;
-    @BindView(R.id.btn_mem3) ImageButton mem3;
+    @BindView(R.id.tg_bt)
+    ToggleButton btn_bt;
+    @BindView(R.id.btn_alldown)
+    ImageButton alldown;
+    @BindView(R.id.btn_mem1)
+    ImageButton mem1;
+    @BindView(R.id.btn_mem2)
+    ImageButton mem2;
+    @BindView(R.id.btn_mem3)
+    ImageButton mem3;
 
     String d;
-    @BindView(R.id.e) TextView e;
-    @BindView(R.id.tv1) TextView L1;
-    @BindView(R.id.tv2) TextView R1;
+    @BindView(R.id.e)
+    TextView e;
+    @BindView(R.id.tv1)
+    TextView L1;
+    @BindView(R.id.tv2)
+    TextView R1;
 
-    @BindView(R.id.tv5) TextView tvSW;
+    @BindView(R.id.tv5)
+    TextView tvSW;
 
     boolean fail;
 
@@ -324,10 +334,8 @@ public class MainActivity extends AppCompatActivity
     };
 
 
-
     Thread workerThread;
 
-    //onDestroy
     public void onDestroy() {
         super.onDestroy();
         if (this.sukses) {
@@ -455,8 +463,6 @@ public class MainActivity extends AppCompatActivity
         }
     };
 
-    //    @Override
-    @SuppressLint("WrongViewCast")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -558,10 +564,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    //end onCreate
-
-
-    //menu
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -620,7 +622,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    //onActifityResult
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) { //login
             if (resultCode == -1) {
@@ -919,10 +920,6 @@ public class MainActivity extends AppCompatActivity
         this.mmOutputStream.write("~".getBytes());
     }
 
-//    void back() throws IOException {
-//        this.mmOutputStream.write("w".getBytes());
-//    }
-
 
     void closeBT() throws IOException {
         this.e.setText(BuildConfig.FLAVOR);
@@ -934,6 +931,5 @@ public class MainActivity extends AppCompatActivity
         Toast.makeText(this, "Bluetooth Disconnect", Toast.LENGTH_SHORT).show();
         this.e.setText(BuildConfig.FLAVOR);
     }
-
 
 }
