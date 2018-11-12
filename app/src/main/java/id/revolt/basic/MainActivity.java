@@ -813,7 +813,6 @@ public class MainActivity extends AppCompatActivity
 
                                             MainActivity.this.L1.setText(separate[0]);
                                             MainActivity.this.R1.setText(separate[1]);
-
                                             MainActivity.this.tvSW.setText(separate[2] + " psi");
 
                                         }

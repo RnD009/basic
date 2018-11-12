@@ -23,6 +23,7 @@ android {
         debug {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFile 'E:/projek/AndroidStudioProjects/basic/app/proguard-rules.pro'
         }
     }
 }
