@@ -45,7 +45,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/article_text"
+            android:text="@string/about"
             android:textColor="@color/word"
             android:textSize="7pt"
             tools:layout_editor_absoluteX="8dp"
