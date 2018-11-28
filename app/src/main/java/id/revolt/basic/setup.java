@@ -24,47 +24,47 @@ public class setup extends AppCompatActivity {
     private Button save;
     boolean switch1;
 
-    private  View.OnClickListener sw11 = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (sw1.isChecked()){
-                sw2.setEnabled(true);
-            }else {
-                sw2.setEnabled(false);
-            }
-        }
-    };
-
-    private  View.OnClickListener sw21 = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (sw2.isChecked()){
-                sw3.setEnabled(true);
-            }else {
-                sw3.setEnabled(false);
-            }
-        }
-    };
-
-    private  View.OnClickListener sw31 = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (sw3.isChecked()){
-                rd1.setEnabled(true);
-                rd2.setEnabled(true);
-                rd3.setEnabled(true);
-            }else {
-                rd1.setEnabled(false);
-                rd2.setEnabled(false);
-                rd3.setEnabled(false);
-            }
-        }
-    };
+//    private  View.OnClickListener sw11 = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            if (sw1.isChecked()){
+//                sw2.setEnabled(true);
+//            }else {
+//                sw2.setEnabled(false);
+//            }
+//        }
+//    };
+//
+//    private  View.OnClickListener sw21 = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            if (sw2.isChecked()){
+//                sw3.setEnabled(true);
+//            }else {
+//                sw3.setEnabled(false);
+//            }
+//        }
+//    };
+//
+//    private  View.OnClickListener sw31 = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            if (sw3.isChecked()){
+//                rd1.setEnabled(true);
+//                rd2.setEnabled(true);
+//                rd3.setEnabled(true);
+//            }else {
+//                rd1.setEnabled(false);
+//                rd2.setEnabled(false);
+//                rd3.setEnabled(false);
+//            }
+//        }
+//    };
 
     private View.OnClickListener save1 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (sw1.isChecked() && !sw2.isChecked() && !sw3.isChecked()){
+            if (sw1.isChecked()){               // && !sw2.isChecked() && !sw3.isChecked()
                 Intent sw1 = new Intent();
                 sw1.setData(Uri.parse("?"));
                 setup.this.setResult( 1, sw1);
@@ -72,36 +72,36 @@ public class setup extends AppCompatActivity {
                 finish();
 
             }
-            else if (sw2.isChecked() && sw1.isChecked() && !sw3.isChecked()){
-                Intent sw2 = new Intent();
-                sw2.setData(Uri.parse("P"));
-                setup.this.setResult( 1, sw2);
-                finish();
-            }
-            else if (sw3.isChecked() && sw2.isChecked() && sw1.isChecked()){
-                boolean valsw3 = true;
-                rd1.setEnabled(true);
-                rd2.setEnabled(true);
-                rd3.setEnabled(true);
-                if (valsw3 == true && rd1.isChecked()){
-                    Intent sw3 = new Intent();
-                    sw3.setData(Uri.parse("J"));
-                    setup.this.setResult( 1, sw3);
-                    finish();
-                }
-                if (valsw3 == true && rd2.isChecked()){
-                    Intent sw3 = new Intent();
-                    sw3.setData(Uri.parse("K"));
-                    setup.this.setResult( 1, sw3);
-                    finish();
-                }
-                if (valsw3 == true && rd3.isChecked()){
-                    Intent sw3 = new Intent();
-                    sw3.setData(Uri.parse("L"));
-                    setup.this.setResult( 1, sw3);
-                    finish();
-                }
-            }
+//            else if (sw2.isChecked() && sw1.isChecked() && !sw3.isChecked()){
+//                Intent sw2 = new Intent();
+//                sw2.setData(Uri.parse("P"));
+//                setup.this.setResult( 1, sw2);
+//                finish();
+//            }
+//            else if (sw3.isChecked() && sw2.isChecked() && sw1.isChecked()){
+//                boolean valsw3 = true;
+//                rd1.setEnabled(true);
+//                rd2.setEnabled(true);
+//                rd3.setEnabled(true);
+//                if (valsw3 == true && rd1.isChecked()){
+//                    Intent sw3 = new Intent();
+//                    sw3.setData(Uri.parse("J"));
+//                    setup.this.setResult( 1, sw3);
+//                    finish();
+//                }
+//                if (valsw3 == true && rd2.isChecked()){
+//                    Intent sw3 = new Intent();
+//                    sw3.setData(Uri.parse("K"));
+//                    setup.this.setResult( 1, sw3);
+//                    finish();
+//                }
+//                if (valsw3 == true && rd3.isChecked()){
+//                    Intent sw3 = new Intent();
+//                    sw3.setData(Uri.parse("L"));
+//                    setup.this.setResult( 1, sw3);
+//                    finish();
+//                }
+//            }
             else if(!sw1.isChecked()){
                 Intent sw1 = new Intent();
                 sw1.setData(Uri.parse("/"));
@@ -121,22 +121,22 @@ public class setup extends AppCompatActivity {
 
         this.sw1 = (Switch) findViewById(R.id.sw1);
         //this.sw2 = (Switch) findViewById(R.id.sw2);
-        sw2.setEnabled(false);
+//        sw2.setEnabled(false);
         //this.sw3 = (Switch) findViewById(R.id.sw3);
-        sw3.setEnabled(false);
+//        sw3.setEnabled(false);
         //this.rd1 = (RadioButton) findViewById(R.id.radioButton1);
         //this.rd2 = (RadioButton) findViewById(R.id.radioButton2);
         //this.rd3 = (RadioButton) findViewById(R.id.radioButton3);
-        rd1.setEnabled(false);
-        rd2.setEnabled(false);
-        rd3.setEnabled(false);
+//        rd1.setEnabled(false);
+//        rd2.setEnabled(false);
+//        rd3.setEnabled(false);
 
         this.save = (Button) findViewById(R.id.btn_save);
 
         this.save.setOnClickListener(this.save1);
-        this.sw1.setOnClickListener(this.sw11);
-        this.sw2.setOnClickListener(this.sw21);
-        this.sw3.setOnClickListener(this.sw31);
+//        this.sw1.setOnClickListener(this.sw11);
+//        this.sw2.setOnClickListener(this.sw21);
+//        this.sw3.setOnClickListener(this.sw31);
     }
 
 }
